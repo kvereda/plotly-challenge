@@ -61,7 +61,7 @@ function buildingPlot(id) {
                 color: sampledata.samples[0].otu_ids,
                 colorscale: "Blues"
             },
-            };
+        };
 
         var bubbleLayout = {
             xaxis:{title: "OTU ID"},
@@ -86,7 +86,7 @@ function buildingPlot(id) {
 
     Plotly.newPlot("pie", data2, pieTrace);
     //end of pie chart
-});
+    });
 }
 
 // retrive info
@@ -105,11 +105,11 @@ function retrievingInfo(id) {
         });
     });
 }
-    //  event change
-    function eventChange(id) {
-        buildingPlot(id);
-        retrievingInfo(id)
-    }
+//  event change
+function eventChange(id) {
+    buildingPlot(id);
+    retrievingInfo(id)
+}
 
 // render data
 function init() {
@@ -125,8 +125,8 @@ function init() {
 
         buildingPlot(data.names[0]);
         retrievingInfo(data.names[0]);
-        });
-    }
+    });
+}
 
 init();
 
